@@ -1,0 +1,28 @@
+/**
+ * Created by Stefan.Iuga on 9/10/2016.
+ */
+public class SuperClass extends SubClass {
+
+    public void cry()
+    {
+        System.out.println("Cry cry cry");
+    }
+
+    public static void main(String[] args) {
+
+        SuperClass obj = new SuperClass();
+
+        obj.cry();
+        obj.bark();
+    }
+}
+
+class SubClass {
+
+    public void bark()
+    {
+        System.out.println("Bark bark bark");
+    }
+}
+
+
