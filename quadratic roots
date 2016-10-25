@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+
+/**
+ * Created by Stefan.Iuga on 9/7/2016.
+ */
+public class Quadratic {
+
+    public static void main(String[] args) {
+
+        double a,b,c,delta,x1,x2 = 0;
+        Scanner input = new Scanner(System.in);
+
+        do {
+            System.out.println("Enter the value of a (must differ from 0): ");
+            a = input.nextDouble();
+        }
+        while(a==0);
+
+        System.out.println("Enter the value of b: ");
+        b = input.nextDouble();
+        System.out.println("Enter the value of c: ");
+        c = input.nextDouble();
+
+        //calculating discriminant
+
+        delta = b*b - 4*a*c;
+
+        if(delta < 0)
+        {
+
+            System.out.println("The equation's roots are complex");
+        }
+
+        else if(delta == 0)
+        {
+            x1 = (-b + Math.sqrt(delta)) /  (2 * a);
+
+            System.out.println("The roots are equal between them and equal to: " + x1);
+        }
+
+        else
+        {
+            x1 = (-b + Math.sqrt(delta))/2*a;
+            x2 = (-b - Math.sqrt(delta))/2*a;
+
+            System.out.println("The first root is: " + x1);
+            System.out.println("The second root is: " + x2);
+        }
+    }
+}
